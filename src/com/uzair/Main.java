@@ -1,10 +1,24 @@
 package com.uzair;
 import com.uzair.linear.List;
+import com.uzair.linear.Stack;
+
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        var list = new List();
+    // * Stack
+    Stack stack = new Stack(10);
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+    System.out.println(stack.toString());
+    stack.pop();
+    System.out.println(stack.toString());
+    System.out.println(stack.peek());
+    System.out.println(stack.isEmpty());
+
+    // * Linked List
+        /*var list = new List();
         list.addLast(10);
         list.addLast(20);
         list.addLast(30);
@@ -27,7 +41,7 @@ public class Main {
         list.printMiddle();
 
         var linkedlist = List.createWithLoop();
-        System.out.println(linkedlist.hasLoop());
+        System.out.println(linkedlist.hasLoop());*/
 
     }
 }
