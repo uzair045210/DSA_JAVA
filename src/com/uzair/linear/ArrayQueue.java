@@ -13,7 +13,7 @@ public class ArrayQueue {
     }
 
     public void enqueue(int item) {
-        if (count == items.length)
+        if (isFull())
             throw new IllegalStateException();
         items[rear] = item;
         rear = (rear + 1) % items.length;
@@ -21,6 +21,8 @@ public class ArrayQueue {
     }
 
     public int dequeue() {
+        if (isEmpty())
+            throw new IllegalStateException();
         var item = items[front];
         items[front] = 0;
         front = (front + 1) % items.length;
