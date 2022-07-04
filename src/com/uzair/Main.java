@@ -2,54 +2,63 @@ package com.uzair;
 import com.uzair.examples.QueueExample;
 import com.uzair.linear.ArrayQueue;
 import com.uzair.linear.List;
-import com.uzair.linear.Stack;
+import com.uzair.linear.StackQueue;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Queue;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
-    // * Queue Using Array
-    ArrayQueue aq = new ArrayQueue(5);
-    aq.enqueue(10);
-    aq.enqueue(20);
-    aq.enqueue(30);
-    System.out.println(aq);
-    aq.dequeue();
-    aq.dequeue();
-    System.out.println(aq);
-    aq.enqueue(40);
-    aq.enqueue(50);
-    aq.enqueue(60);
-    aq.enqueue(70);
-    System.out.println(aq);
-    System.out.println(aq.isFull());
-    aq.dequeue();
-    aq.dequeue();
-    System.out.println(aq.isEmpty());
-    System.out.println(aq);
-    System.out.println(aq.peek());
-    aq.enqueue(80);
-    System.out.println(aq);
-    aq.enqueue(90);
-    System.out.println(aq);
-    aq.dequeue();
-    System.out.println(aq);
-    System.out.println(aq.peek());
-    aq.enqueue(100);
-    System.out.println(aq);
+        // * Queue Using Stack
+        StackQueue sq = new StackQueue();
+        sq.enqueue(10);
+        sq.enqueue(20);
+        sq.enqueue(30);
+        sq.dequeue();
+        sq.dequeue();
+        sq.dequeue();
+        // * Queue Using Array
+    //    ArrayQueue aq = new ArrayQueue(5);
+    //    aq.enqueue(10);
+    //    aq.enqueue(20);
+    //    aq.enqueue(30);
+    //    System.out.println(aq);
+    //    aq.dequeue();
+    //    aq.dequeue();
+    //    System.out.println(aq);
+    //    aq.enqueue(40);
+    //    aq.enqueue(50);
+    //    aq.enqueue(60);
+    //    aq.enqueue(70);
+    //    System.out.println(aq);
+    //    System.out.println(aq.isFull());
+    //    aq.dequeue();
+    //    aq.dequeue();
+    //    System.out.println(aq.isEmpty());
+    //    System.out.println(aq);
+    //    System.out.println(aq.peek());
+    //    aq.enqueue(80);
+    //    System.out.println(aq);
+    //    aq.enqueue(90);
+    //    System.out.println(aq);
+    //    aq.dequeue();
+    //    System.out.println(aq);
+    //    System.out.println(aq.peek());
+    //    aq.enqueue(100);
+    //    System.out.println(aq);
 
-//     * Stack
-//    Stack stack = new Stack(10);
-//    stack.push(10);
-//    stack.push(20);
-//    stack.push(30);
-//    System.out.println(stack.toString());
-//    stack.pop();
-//    System.out.println(stack.toString());
-//    System.out.println(stack.peek());
-//    System.out.println(stack.isEmpty());
+    //     * Stack
+    //    Stack stack = new Stack(10);
+    //    stack.push(10);
+    //    stack.push(20);
+    //    stack.push(30);
+    //    System.out.println(stack.toString());
+    //    stack.pop();
+    //    System.out.println(stack.toString());
+    //    System.out.println(stack.peek());
+    //    System.out.println(stack.isEmpty());
 
     // * Linked List
         /*var list = new List();
