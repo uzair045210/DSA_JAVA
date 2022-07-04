@@ -1,24 +1,41 @@
 package com.uzair;
-import com.uzair.examples.QueueExample;
-import com.uzair.linear.ArrayQueue;
-import com.uzair.linear.List;
-import com.uzair.linear.StackQueue;
+
+import com.uzair.linear.queue.PriorityQueue;
+import com.uzair.linear.queue.QueueReverser;
 
 import java.util.ArrayDeque;
-import java.util.Arrays;
 import java.util.Queue;
-import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
+        // * PriorityQueue
+        PriorityQueue pq = new PriorityQueue(5);
+        pq.add(2);
+        pq.add(3);
+        pq.add(6);
+        pq.add(1);
+        pq.add(4);
+        System.out.println(pq);
+        while (!pq.isEmpty())
+            System.out.println(pq.remove());
+        System.out.println(pq);
+        Queue<Integer> q = new ArrayDeque<>();
+        q.add(10);
+        q.add(20);
+        q.add(30);
+        q.add(40);
+        q.add(50);
+        QueueReverser.reverse(q, 3);
+        System.out.println(q);
+
         // * Queue Using Stack
-        StackQueue sq = new StackQueue();
-        sq.enqueue(10);
-        sq.enqueue(20);
-        sq.enqueue(30);
-        sq.dequeue();
-        sq.dequeue();
-        sq.dequeue();
+//        StackQueue sq = new StackQueue();
+//        sq.enqueue(10);
+//        sq.enqueue(20);
+//        sq.enqueue(30);
+//        sq.dequeue();
+//        sq.dequeue();
+//        sq.dequeue();
         // * Queue Using Array
     //    ArrayQueue aq = new ArrayQueue(5);
     //    aq.enqueue(10);

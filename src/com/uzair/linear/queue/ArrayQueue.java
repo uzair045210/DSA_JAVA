@@ -1,4 +1,4 @@
-package com.uzair.linear;
+package com.uzair.linear.queue;
 
 import java.util.Arrays;
 
