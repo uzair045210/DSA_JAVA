@@ -6,6 +6,7 @@ import java.util.Map;
 public class HashMapExample {
     public char getNonRepeated(String s) {
         Map<Character, Integer> map = new HashMap<>();
+        s = s.toLowerCase();
         var chars = s.toCharArray();
         for (var ch : chars) {
             var count = map.containsKey(ch) ? map.get(ch) : 0;
