@@ -1,5 +1,6 @@
 package com.uzair;
 
+import com.uzair.examples.HashMapExample;
 import com.uzair.linear.queue.ListQueue;
 import com.uzair.linear.queue.PriorityQueue;
 import com.uzair.linear.queue.QueueReverser;
@@ -8,28 +9,31 @@ import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
+        // * HashMap Example
+        HashMapExample hme = new HashMapExample();
+        System.out.println(hme.getNonRepeated("a green apple"));
         // * ListQueue
-        ListQueue listQueue = new ListQueue();
-        listQueue.enqueue(10);
-        listQueue.enqueue(20);
-        listQueue.enqueue(30);
-        System.out.println(listQueue);
-        listQueue.enqueue(40);
-        listQueue.enqueue(50);
-        System.out.println(listQueue);
-        listQueue.dequeue();
-        listQueue.dequeue();
-        listQueue.dequeue();
-        System.out.println(listQueue);
-        System.out.println(listQueue.isEmpty());
-        System.out.println(listQueue.size());
-        System.out.println(listQueue.peek());
-        listQueue.dequeue();
-        listQueue.dequeue();
-        System.out.println(listQueue);
-        System.out.println(listQueue.isEmpty());
-        System.out.println(listQueue.size());
-        System.out.println(listQueue.peek());
+//        ListQueue listQueue = new ListQueue();
+//        listQueue.enqueue(10);
+//        listQueue.enqueue(20);
+//        listQueue.enqueue(30);
+//        System.out.println(listQueue);
+//        listQueue.enqueue(40);
+//        listQueue.enqueue(50);
+//        System.out.println(listQueue);
+//        listQueue.dequeue();
+//        listQueue.dequeue();
+//        listQueue.dequeue();
+//        System.out.println(listQueue);
+//        System.out.println(listQueue.isEmpty());
+//        System.out.println(listQueue.size());
+//        System.out.println(listQueue.peek());
+//        listQueue.dequeue();
+//        listQueue.dequeue();
+//        System.out.println(listQueue);
+//        System.out.println(listQueue.isEmpty());
+//        System.out.println(listQueue.size());
+//        System.out.println(listQueue.peek());
 
         // * PriorityQueue
 //        PriorityQueue pq = new PriorityQueue(5);
