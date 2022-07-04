@@ -1,32 +1,55 @@
 package com.uzair;
 
+import com.uzair.linear.queue.ListQueue;
 import com.uzair.linear.queue.PriorityQueue;
 import com.uzair.linear.queue.QueueReverser;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
+        // * ListQueue
+        ListQueue listQueue = new ListQueue();
+        listQueue.enqueue(10);
+        listQueue.enqueue(20);
+        listQueue.enqueue(30);
+        System.out.println(listQueue);
+        listQueue.enqueue(40);
+        listQueue.enqueue(50);
+        System.out.println(listQueue);
+        listQueue.dequeue();
+        listQueue.dequeue();
+        listQueue.dequeue();
+        System.out.println(listQueue);
+        System.out.println(listQueue.isEmpty());
+        System.out.println(listQueue.size());
+        System.out.println(listQueue.peek());
+        listQueue.dequeue();
+        listQueue.dequeue();
+        System.out.println(listQueue);
+        System.out.println(listQueue.isEmpty());
+        System.out.println(listQueue.size());
+        System.out.println(listQueue.peek());
+
         // * PriorityQueue
-        PriorityQueue pq = new PriorityQueue(5);
-        pq.add(2);
-        pq.add(3);
-        pq.add(6);
-        pq.add(1);
-        pq.add(4);
-        System.out.println(pq);
-        while (!pq.isEmpty())
-            System.out.println(pq.remove());
-        System.out.println(pq);
-        Queue<Integer> q = new ArrayDeque<>();
-        q.add(10);
-        q.add(20);
-        q.add(30);
-        q.add(40);
-        q.add(50);
-        QueueReverser.reverse(q, 3);
-        System.out.println(q);
+//        PriorityQueue pq = new PriorityQueue(5);
+//        pq.add(2);
+//        pq.add(3);
+//        pq.add(6);
+//        pq.add(1);
+//        pq.add(4);
+//        System.out.println(pq);
+//        while (!pq.isEmpty())
+//            System.out.println(pq.remove());
+//        System.out.println(pq);
+//        Queue<Integer> q = new ArrayDeque<>();
+//        q.add(10);
+//        q.add(20);
+//        q.add(30);
+//        q.add(40);
+//        q.add(50);
+//        QueueReverser.reverse(q, 3);
+//        System.out.println(q);
 
         // * Queue Using Stack
 //        StackQueue sq = new StackQueue();
