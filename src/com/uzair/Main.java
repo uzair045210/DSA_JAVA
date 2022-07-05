@@ -1,6 +1,7 @@
 package com.uzair;
 
 import com.uzair.examples.HashMapExample;
+import com.uzair.linear.hashmap.HashMap;
 import com.uzair.linear.hashmap.HashTable;
 import com.uzair.linear.queue.ListQueue;
 import com.uzair.linear.queue.PriorityQueue;
@@ -10,25 +11,33 @@ import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
+        // * Linear Probing - HashMap
+        HashMap hashMap = new HashMap(5);
+        hashMap.put(6, "A");
+        hashMap.put(8, "B");
+        hashMap.put(11, "C");
+        hashMap.remove(8);
+        System.out.println(hashMap.get(11));
+        System.out.println(hashMap);
         // * HashTable
-        HashTable table = new HashTable(5);
-        table.put(6, "A");
-        table.put(8, "B");
-        table.put(11, "C");
-        table.put(6, "A+");
-        table.remove(6);
-        System.out.println(table.get(11));
+//        HashTable table = new HashTable(5);
+//        table.put(6, "A");
+//        table.put(8, "B");
+//        table.put(11, "C");
+//        table.put(6, "A+");
+//        table.remove(6);
+//        System.out.println(table.get(11));
 
         // * HashMap Example
-        HashMapExample hme = new HashMapExample();
-        int[] items = {1, 2, 2, 3, 3, 3, 4, 5};
-        System.out.println(hme.mostFrequent(items));
-        int[] items2 = {1, 7, 5, 9, 2, 12, 3};
-        System.out.println(hme.countPairWithDifference(items2, 2));
-        int[] items3 = {2, 7, 11, 15};
-        int[] result = hme.twoSum(items3, 9);
-        for (var n : result)
-            System.out.println(n);
+//        HashMapExample hme = new HashMapExample();
+//        int[] items = {1, 2, 2, 3, 3, 3, 4, 5};
+//        System.out.println(hme.mostFrequent(items));
+//        int[] items2 = {1, 7, 5, 9, 2, 12, 3};
+//        System.out.println(hme.countPairWithDifference(items2, 2));
+//        int[] items3 = {2, 7, 11, 15};
+//        int[] result = hme.twoSum(items3, 9);
+//        for (var n : result)
+//            System.out.println(n);
 //        System.out.println(hme.getNonRepeated("a green apple"));
         // * ListQueue
 //        ListQueue listQueue = new ListQueue();
