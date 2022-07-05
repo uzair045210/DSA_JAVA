@@ -85,7 +85,7 @@ public class HashMap {
     }
 
     private int index(int key, int i) {
-        return (hash(key) + i) % entries.length;
+        return (hash(key) + i * hash(key)) % entries.length;
     }
 
     private int hash(int key) {

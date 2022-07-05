@@ -11,14 +11,28 @@ import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
-        // * Linear Probing - HashMap
+        // * Double Probing - HashMap
         HashMap hashMap = new HashMap(5);
         hashMap.put(6, "A");
         hashMap.put(8, "B");
         hashMap.put(11, "C");
-        hashMap.remove(8);
-        System.out.println(hashMap.get(11));
+        hashMap.remove(6);
+        hashMap.put(13, "D");
+        hashMap.put(11, "C+");
+        hashMap.remove(13);
+        System.out.println(hashMap.get(8));
         System.out.println(hashMap);
+        // * Linear Probing - HashMap
+//        HashMap hashMap = new HashMap(5);
+//        hashMap.put(6, "A");
+//        hashMap.put(8, "B");
+//        hashMap.put(11, "C");
+//        hashMap.remove(6);
+//        hashMap.put(13, "D");
+//        hashMap.put(11, "C+");
+//        hashMap.remove(13);
+//        System.out.println(hashMap.get(11));
+//        System.out.println(hashMap);
         // * HashTable
 //        HashTable table = new HashTable(5);
 //        table.put(6, "A");
