@@ -1,27 +1,71 @@
 package com.uzair;
 
+import com.uzair.binary.BNode;
+import com.uzair.binary.tree.BTPrinter;
+import com.uzair.binary.tree.Tree;
 import com.uzair.examples.HashMapExample;
 import com.uzair.linear.hashmap.HashMap;
 import com.uzair.linear.hashmap.HashTable;
 import com.uzair.linear.queue.ListQueue;
 import com.uzair.linear.queue.PriorityQueue;
 import com.uzair.linear.queue.QueueReverser;
-import java.util.ArrayDeque;
-import java.util.Queue;
+
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        // * Tree
+        Tree tree = new Tree();
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(9);
+        tree.insert(1);
+        tree.insert(6);
+        tree.insert(8);
+        tree.insert(10);
+        tree.swapRoot();
+        tree.swapRoot();
+        Tree tree1 = new Tree();
+        tree1.insert(7);
+        tree1.insert(4);
+        tree1.insert(9);
+        tree1.insert(1);
+        tree1.insert(6);
+        tree1.insert(8);
+        tree1.insert(10);
+        System.out.println("Equals = " + tree.equals(tree1));
+        System.out.println("Find 10 = " + tree.find(10));
+        System.out.println("Contains = " + tree.contains(12));
+        tree.traversePreOrder();
+        System.out.println("\n");
+        tree.traverseInOrder();
+        System.out.println("\n");
+        tree.traversePostOrder();
+        System.out.println("Height = " + tree.height());
+        System.out.println("Size = " + tree.size());
+        System.out.println("No. of Leaves = " + tree.countLeaves());
+        System.out.println("Minimum = " + tree.min());
+        System.out.println("Maximum = " + tree.max());
+        System.out.println("IS Binary Search Tree = " + tree.isBST());
+        BTPrinter.printNode(tree.root);
+        System.out.println("Nodes At Height");
+        System.out.println(tree.getNodesAtDistance(0));
+        System.out.println("Traverse Level Order");
+        tree.traverseLevelOrder();
+        System.out.println("Are Siblings = " + tree.areSibling(4, 6));
+        System.out.println("Ancestors = " + tree.getAncestor(10));
+        System.out.println("Done");
         // * Double Probing - HashMap
-        HashMap hashMap = new HashMap(5);
-        hashMap.put(6, "A");
-        hashMap.put(8, "B");
-        hashMap.put(11, "C");
-        hashMap.remove(6);
-        hashMap.put(13, "D");
-        hashMap.put(11, "C+");
-        hashMap.remove(13);
-        System.out.println(hashMap.get(8));
-        System.out.println(hashMap);
+//        HashMap hashMap = new HashMap(5);
+//        hashMap.put(6, "A");
+//        hashMap.put(8, "B");
+//        hashMap.put(11, "C");
+//        hashMap.remove(6);
+//        hashMap.put(13, "D");
+//        hashMap.put(11, "C+");
+//        hashMap.remove(13);
+//        System.out.println(hashMap.get(8));
+//        System.out.println(hashMap);
         // * Linear Probing - HashMap
 //        HashMap hashMap = new HashMap(5);
 //        hashMap.put(6, "A");
@@ -172,4 +216,5 @@ public class Main {
         System.out.println(linkedlist.hasLoop());*/
 
     }
+
 }
