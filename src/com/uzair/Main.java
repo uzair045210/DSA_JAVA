@@ -2,6 +2,7 @@ package com.uzair;
 
 import com.uzair.algorithms.Sort;
 import com.uzair.binary.BNode;
+import com.uzair.binary.Heap;
 import com.uzair.binary.tree.AVLTree;
 import com.uzair.binary.tree.BTPrinter;
 import com.uzair.binary.tree.Tree;
@@ -17,16 +18,26 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // * Sorting
-        int[] arr = {2, 8, 5, 4, 3, 1};
-        Sort sort = new Sort();
-        sort.bubbleSort(arr);
-        sort.selectionSort(arr);
-        sort.insertionSort(arr);
-        sort.mergeSort(arr);
-        sort.quickSort(arr);
-        sort.countingSort(arr, 8);
-        sort.bucketSort(arr, 3);
-        System.out.println("Array = " + Arrays.toString(arr));
+//        int[] arr = {2, 8, 5, 4, 3, 1};
+//        Sort sort = new Sort();
+//        sort.bubbleSort(arr);
+//        sort.selectionSort(arr);
+//        sort.insertionSort(arr);
+//        sort.mergeSort(arr);
+//        sort.quickSort(arr);
+//        sort.countingSort(arr, 8);
+//        sort.bucketSort(arr, 3);
+//        System.out.println("Array = " + Arrays.toString(arr));
+        // * Heap
+        Heap heap = new Heap(10);
+        heap.insert(10);
+        heap.insert(5);
+        heap.insert(17);
+        heap.insert(4);
+        heap.insert(22);
+        System.out.println(heap);
+        heap.remove();
+        System.out.println(heap);
         // * AVL - Tree
 //        AVLTree avlTree = new AVLTree();
 //        avlTree.insert(10);
