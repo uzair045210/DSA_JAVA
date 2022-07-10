@@ -16,23 +16,25 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // * AVL - Tree
-        AVLTree avlTree = new AVLTree();
-        avlTree.insert(10);
-        avlTree.insert(20);
-        avlTree.insert(30);
-        System.out.println("Done");
+//        AVLTree avlTree = new AVLTree();
+//        avlTree.insert(10);
+//        avlTree.insert(20);
+//        avlTree.insert(30);
+//        System.out.println("Done");
         // * Tree
-//        Tree tree = new Tree();
-//        tree.insert(7);
-//        tree.insert(4);
-//        tree.insert(9);
-//        tree.insert(1);
-//        tree.insert(6);
-//        tree.insert(8);
-//        tree.insert(10);
-//        tree.insert(9);
-//        tree.insert(15);
-//        tree.insert(20);
+        Tree tree = new Tree();
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(9);
+        tree.insert(1);
+        tree.insert(6);
+        tree.insert(8);
+        tree.insert(10);
+        tree.insert(9);
+        tree.insert(15);
+        tree.insert(20);
+        System.out.println(tree.isBalanced());
+        System.out.println(tree.isPerfect());
 //        tree.swapRoot();
 //        tree.swapRoot();
 //        Tree tree1 = new Tree();

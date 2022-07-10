@@ -241,6 +241,22 @@ public class Tree {
 
     }
 
+    // * Is balanced
+    public boolean isBalanced() {
+        return isBalanced(root);
+    }
+    private boolean isBalanced(BNode node) {
+        if (root == null)
+            return true;
+        var balanceFactor = height(root.left) - height(root.right);
+        return Math.abs(balanceFactor) <= 1 && isBalanced(node.right) && isBalanced(node.right);
+    }
+
+    // * Is Perfect
+    public boolean isPerfect() {
+        return size() == (Math.pow(2, height() + 1) - 1);
+    }
+
     // * Level Order
     public void traverseLevelOrder() {
         for (var i = 0; i <= height(); i++)
