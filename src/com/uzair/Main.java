@@ -1,5 +1,6 @@
 package com.uzair;
 
+import com.uzair.algorithms.Sort;
 import com.uzair.binary.BNode;
 import com.uzair.binary.tree.AVLTree;
 import com.uzair.binary.tree.BTPrinter;
@@ -15,6 +16,17 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        // * Sorting
+        int[] arr = {2, 8, 5, 4, 3, 1};
+        Sort sort = new Sort();
+        sort.bubbleSort(arr);
+        sort.selectionSort(arr);
+        sort.insertionSort(arr);
+        sort.mergeSort(arr);
+        sort.quickSort(arr);
+        sort.countingSort(arr, 8);
+        sort.bucketSort(arr, 3);
+        System.out.println("Array = " + Arrays.toString(arr));
         // * AVL - Tree
 //        AVLTree avlTree = new AVLTree();
 //        avlTree.insert(10);
@@ -22,19 +34,19 @@ public class Main {
 //        avlTree.insert(30);
 //        System.out.println("Done");
         // * Tree
-        Tree tree = new Tree();
-        tree.insert(7);
-        tree.insert(4);
-        tree.insert(9);
-        tree.insert(1);
-        tree.insert(6);
-        tree.insert(8);
-        tree.insert(10);
-        tree.insert(9);
-        tree.insert(15);
-        tree.insert(20);
-        System.out.println(tree.isBalanced());
-        System.out.println(tree.isPerfect());
+//        Tree tree = new Tree();
+//        tree.insert(7);
+//        tree.insert(4);
+//        tree.insert(9);
+//        tree.insert(1);
+//        tree.insert(6);
+//        tree.insert(8);
+//        tree.insert(10);
+//        tree.insert(9);
+//        tree.insert(15);
+//        tree.insert(20);
+//        System.out.println(tree.isBalanced());
+//        System.out.println(tree.isPerfect());
 //        tree.swapRoot();
 //        tree.swapRoot();
 //        Tree tree1 = new Tree();
